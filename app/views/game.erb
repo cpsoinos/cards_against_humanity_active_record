@@ -1,0 +1,26 @@
+<% binding.pry %>
+<p><%= "Number of players: #{game.players.length}" %></p>
+<div class="players">
+  <h3><%= "Players:" %></h3>
+  <ul>
+    <% game.players.each do |player| %>
+      <li class="player_list"><%= player.name %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="black_card">
+  <%= black_card.content %>
+</div>
+<% binding.pry %>
+<% if player.judge == false %>
+  <div class="row">
+
+    <ul class="small-block-grid-2 large-block-grid-5">
+      <% player.cards.each do |card| %>
+        <li class="white_card"><%= card.content %></li>
+      <% end %>
+    </ul>
+
+  </div>
+<% end %>

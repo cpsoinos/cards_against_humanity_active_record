@@ -1,1 +1,38 @@
-<h1><%= @title %></h1>
+<h1>Welcome to <%= @title %>!</h1>
+
+<% if session[:flash] %>
+  <%= session[:flash] %>
+<% end %>
+
+<div class="row">
+  <h3>Create a new game:</h3>
+  <form action="/create_game" method="post">
+    <p>
+      <label for ="player_name">Enter your name: </label>
+      <input type="text" name="player_name">
+    </p>
+    <p>
+      <label for ="new_game_name">Game name: </label>
+      <input type="text" name="new_game_name">
+    </p>
+
+    <% if games.length >= 1 %>
+      <h3>OR, join a game:</h3>
+      <ul>
+        <% games.each do |game| %>
+          <li><input type="radio" name="join_game_name" value="<%= game.name %>"</input><%= game.name %></li>
+          <% if game.players.length >= 1 %>
+            <li>Players:</li>
+            <ul>
+            <% game.players.each do |player| %>
+              <li class="game_players"><%= player.name %></li>
+            <% end %>
+            </ul>
+          <% end %>
+        <% end %>
+      </ul>
+      <input type="submit">
+    <% end %>
+  </form>
+
+</div>

@@ -1,0 +1,65 @@
+body {
+  background-color: steelblue;
+  color: black;
+  font-family: Helvetica, sans-serif;
+}
+
+ul {
+  margin: 0 auto;
+}
+
+ul.large-block-grid-5 {
+  padding-left: 1.8em;
+}
+
+li {
+  list-style: none;
+}
+
+.player_list {
+  text-align: left;
+  margin-left: 1em;
+}
+
+.game_players {
+  list-style: square;
+  margin-left: 1em;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: left;
+}
+
+.white_cards {
+  margin: 0 auto;
+}
+
+li.white_card {
+  list-style: none;
+  background-color: white;
+  color: black;
+  width: 10em;
+  height: 15em;
+  margin: 1em;
+  border: 1em solid white;
+  border-radius: 1em;
+}
+
+.black_card {
+  background-color: black;
+  color: white;
+  width: 10em;
+  height: 15em;
+  border: 1em solid black;
+  border-radius: 1em;
+  margin: 0 auto;
+}
+
+.players {
+  margin: 0 auto;
+  text-align: center;
+}
